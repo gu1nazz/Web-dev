@@ -1,22 +1,23 @@
-from models import Animal,Dog,Cat
+from models import Vehicle, Car, Bike
 
 
 def main():
 
-    animal = Animal("Kesha",2,"Bird")
-    myDog = Dog("Layka",4,"Golden Retriever")
-    my_cat = Cat("Markiza",3)
+    vehicle = Vehicle("Generic", 2020, "Vehicle")
+    my_car = Car("Toyota", 2022, "Camry")
+    my_bike = Bike("BMX", 2021)
 
-    my_animals = [animal,my_cat,myDog]
+    my_vehicles = [vehicle, my_bike, my_car]
 
-    for i in my_animals:
+    for i in my_vehicles:
         print(i)
         print(i.get_info())
         print(i.move())
-        if isinstance(i, Dog):
-            print(f"Sound: {i.make_sound()}")
-        elif isinstance(i, Cat):
-            print(f"Sound: {i.speak()}")
+
+        if isinstance(i, Car):
+            print(f"Signal: {i.signal()}")
+        elif isinstance(i, Bike):
+            print(f"Signal: {i.signal()}")
 
 
 if __name__ == "__main__":

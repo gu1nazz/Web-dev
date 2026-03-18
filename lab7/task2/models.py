@@ -1,37 +1,37 @@
-class Animal:
-    def __init__(self,name,age,species):
-        self.name=name
-        self.age=age
-        self.species=species
+class Vehicle:
+    def __init__(self, brand, year, vehicle_type):
+        self.brand = brand
+        self.year = year
+        self.vehicle_type = vehicle_type
 
     def move(self):
-        return f"{self.name} is moving.."
+        return f"{self.brand} is moving.."
     
     def get_info(self):
-        return f"{self.name} is a {self.age} year-old {self.species}."
+        return f"{self.brand} is a {self.year} {self.vehicle_type}."
     
     def __str__(self):
-        return f"Animal Object: {self.name}"
-    
+        return f"Vehicle Object: {self.brand}"
 
-class Dog(Animal):
-    def __init__(self, name, age,breed):
-        super().__init__(name,age,"Dog")
-        self.breed=breed
 
-    def move(self):
-        return f"Dog {self.name} the {self.breed} is running.."
-    
-    def speak(self):
-        return "Woof,woof"
-    
-
-class Cat(Animal):
-    def __init__(self, name, age):
-        super().__init__(name,age ,"Cat")
+class Car(Vehicle):
+    def __init__(self, brand, year, model):
+        super().__init__(brand, year, "Car")
+        self.model = model
 
     def move(self):
-        return f"{self.name} is moving in the house"
+        return f"Car {self.brand} {self.model} is driving.."
+    
+    def signal(self):
+        return "Beep beep!"
+    
 
-    def speak(self):
-        return "Meow,Meoow!/!"
+class Bike(Vehicle):
+    def __init__(self, brand, year):
+        super().__init__(brand, year, "Bike")
+
+    def move(self):
+        return f"{self.brand} bike is moving on the road"
+
+    def signal(self):
+        return "Ring ring!"
