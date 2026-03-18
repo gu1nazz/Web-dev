@@ -2,7 +2,6 @@ from models import Vehicle, Car, Bike
 
 
 def main():
-
     vehicle = Vehicle("Generic", 2020, "Vehicle")
     my_car = Car("Toyota", 2022, "Camry")
     my_bike = Bike("BMX", 2021)
